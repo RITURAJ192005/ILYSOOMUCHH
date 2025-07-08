@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Love ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: pink;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+      height: 100vh;
+    }
+
+    h1 {
+      margin-top: 50px;
+      font-size: 3em;
+      color: #fff;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      background-color: white;
+      color: hotpink;
+      border: 2px solid hotpink;
+      border-radius: 25px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: hotpink;
+      color: white;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 8s infinite;
+      opacity: 0.7;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-1000px) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>To My Beautiful Girlfriend,Sohini💖</h1>
+  <p>
+    Every moment with you feels like a dream I never want to wake up from. Your smile brightens my darkest days, and your laughter is the sweetest melody I know. I love you more than words can ever express — truly, deeply, endlessly.
+  </p>
+
+  <div class="buttons">
+    <button class="btn" onclick="alert('Yay! I love you too baby! 💕')">I Love You Too 💘</button>
+    <button class="btn" onclick="alert('I promise to try even harder! 💪💖')">More Efforts 😅</button>
+  </div>
+
+  <!-- Heart animation generator -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      heart.style.top = window.innerHeight + 'px';
+      heart.style.animationDuration = 5 + Math.random() * 5 + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 10000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
